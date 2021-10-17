@@ -16,56 +16,58 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
     />
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="row w-100 align-items-center">
-          <div class="col-3 px-5">
-            <button class="btn btn-danger shape">Inicio</button>
-          </div>
-          <div class="col-5 text-center">
-            <a class="navbar-brand" href="#">
-              <i class="fa fa-dropbox text-success fs-2"></i>
-              IdeasBox
-            </a>
-          </div>
-
-          <button
-            class="navbar-toggler my-2 w-25"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="col d-flex">
-            <div
-              class="collapse navbar-collapse d-lg-flex justify-content-end"
-              id="navbarSupportedContent"
-            >
-              <div class="d-flex justify-content-around">
-                <form class="mx-2">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Busqueda"
-                    />
-                    <button class="btn btn-danger" type="button">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </div>
-                </form>
-                <button class="btn btn-danger shape">Iniciar sesion</button>
+        <a class="navbar-brand px-2" href="#">
+          <img
+            src="./assets/logo.png"
+            alt=""
+            width="45"
+            height="45"
+            class="d-inline-block"
+          />
+          <span class="ms-2 brand-title"> IDEAS BOX </span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-3" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <div class="d-flex align-items-center">
+            <form>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  placeholder="Busqueda..."
+                />
+                <button class="btn btn-danger rounded-0" type="button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
               </div>
-            </div>
+            </form>
+            <a
+              href="./Auth/index.html"
+              class="btn btn-danger rounded-0 shape ms-2"
+            >
+              Iniciar Sesion
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
     <div class="container-fluid my-3">
-      <div class="row align-items-center w-100">
+      <div class="row align-items-center w-100 mx-0">
         <!-- Secciones -->
         <div class="col-lg-2">
           <div class="row text-white mx-sm-2">
@@ -126,18 +128,26 @@
             alt=""
           />
 
+          <div>
+            <p
+              class="
+                position-absolute
+                fw-bold
+                fs-1
+                text-white text-center
+                d-none d-md-block
+                banner-text-float
+                brand-title
+              "
+            >
+              Financia tu idea, proyecto o negocio
+            </p>
+          </div>
           <button
-            class="btn btn-success position-absolute"
-            style="bottom: 50px; left: 45%; width: 150px"
+            class="btn btn-success position-absolute shape banner-button-float"
           >
-            Invertir ahora
+            Conocer mas...
           </button>
-          <p
-            style="top: 50px; left: 35px; width: 300px"
-            class="position-absolute fw-bold fs-2 text-white text-center"
-          >
-            Financia tu idea, proyecto o negocio
-          </p>
         </div>
         <!-- Redes sociales -->
         <!-- <div class="col-lg-1 align-self-start social" style="width: 6.333%">
@@ -159,51 +169,397 @@
       </div>
     </div>
 
+    <div class="container my-5" class="my-5">
+      <div>
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Arte</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/251/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Destacado 1</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
+                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
+                      quisquam commodi accusantium tenetur laboriosam earum,
+                      consequuntur odit.
+                    </p>
+                    <a href="" class="stretched-link"> Ver mas... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/184/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <h5 class="card-title">Destacado 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Perferendis temporibus incidunt, unde repellat dolorum nulla
+                    obcaecati quod eos quas! Esse accusamu
+                  </p>
+                  <a href="" class="stretched-link text-light">Ver mas...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Libros y Comics</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 order-1 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/180/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Destacado 1</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
+                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
+                      quisquam commodi accusantium tenetur laboriosam earum,
+                      consequuntur odit.
+                    </p>
+                    <a href="" class="stretched-link"> Ver mas... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 order-0 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/310/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <div class="card-text-overlay">
+                    <h5 class="card-title">Destacado 2</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Perferendis temporibus incidunt, unde repellat dolorum
+                      nulla obcaecati quod eos quas! Esse accusamu
+                    </p>
+                    <a href="" class="stretched-link text-light">Ver mas...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Cine</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/316/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <div>
+                      <h5 class="card-title">Destacado 1</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident mollitia nemo, et ullam omnis minima.
+                        Voluptas, dolorum consequuntur! Reprehenderit mollitia
+                        iusto ipsam quisquam commodi accusantium tenetur
+                        laboriosam earum, consequuntur odit.
+                      </p>
+                      <a href="" class="stretched-link"> Ver mas... </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/327/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <h5 class="card-title">Destacado 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consequuntur necessitatibus dignissimos
+                  </p>
+                  <a href="" class="stretched-link text-light">Ver mas...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Comida</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 order-1 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/327/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Destacado 1</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
+                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
+                      quisquam commodi accusantium tenetur laboriosam earum,
+                      consequuntur odit.
+                    </p>
+                    <a href="" class="stretched-link"> Ver mas... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 order-0 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/33/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <h5 class="card-title">Destacado 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Perferendis temporibus incidunt, unde repellat dolorum nulla
+                    obcaecati quod eos quas! Esse accusamu
+                  </p>
+                  <a href="" class="stretched-link text-light">Ver mas...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Juegos</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/35/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Destacado 1</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
+                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
+                      quisquam commodi accusantium tenetur laboriosam earum,
+                      consequuntur odit.
+                    </p>
+                    <a href="" class="stretched-link"> Ver mas... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/350/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <h5 class="card-title">Destacado 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Perferendis temporibus incidunt, unde repellat dolorum nulla
+                    obcaecati quod eos quas! Esse accusamu
+                  </p>
+                  <a href="" class="stretched-link text-light">Ver mas...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Musica</p>
+        <div class="row align-items-center">
+          <div class="col-lg-8 order-1 my-2">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://picsum.photos/id/435/1200"
+                    class="card-img"
+                    alt="destacadoArte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Destacado 1</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
+                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
+                      quisquam commodi accusantium tenetur laboriosam earum,
+                      consequuntur odit.
+                    </p>
+                    <a href="" class="stretched-link"> Ver mas... </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 order-0 my-2">
+            <div class="card text-white shadow-lg">
+              <img
+                src="https://picsum.photos/id/450/500"
+                class="card-img"
+                alt="..."
+              />
+              <div class="card-img-overlay">
+                <div class="card-text-overlay">
+                  <h5 class="card-title">Destacado 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Perferendis temporibus incidunt, unde repellat dolorum nulla
+                    obcaecati quod eos quas! Esse accusamu
+                  </p>
+                  <a href="" class="stretched-link text-light">Ver mas...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid p-3 bg-content">
-      <div class="row">
+      <div class="row align-items-center justify-content-center">
         <!-- Vision -->
         <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-6 bg-primary text-white">
-              <p class="fw-bolder fs-3 text-center">Nuestra Mision</p>
-              <p class="fs-6" style="text-align: justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-                error ea iusto perferendis animi distinctio suscipit laboriosam
-                atque, nesciunt eligendi quibusdam consequuntur doloremque
-                laborum quis provident voluptatem tempora dolor a tempore
-                facilis mollitia. Eos eius nihil alias harum quod voluptates!
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <img
-                src="https://picsum.photos/id/55/1200"
-                class="img-fluid"
-                alt=""
-              />
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 bg-intro text-white my-2">
+                <div class="d-flex flex-column justify-content-center h-100">
+                  <p class="fw-bolder fs-3 text-center">Nuestra Mision</p>
+                  <p class="fs-6 d-flex" style="text-align: justify">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Optio error ea iusto perferendis animi distinctio suscipit
+                    laboriosam atque, nesciunt eligendi quibusdam consequuntur
+                    doloremque
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="https://picsum.photos/id/55/1200"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
         <!-- Mision -->
         <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-6 bg-primary text-white">
-              <p class="fw-bolder fs-3 text-center">Nuestra Vision</p>
-              <p class="fs-6" style="text-align: justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
-                error ea iusto perferendis animi distinctio suscipit laboriosam
-                atque, nesciunt eligendi quibusdam consequuntur doloremque
-                laborum quis provident voluptatem tempora dolor a tempore
-                facilis mollitia. Eos eius nihil alias harum quod voluptates!
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <img
-                src="https://picsum.photos/id/15/1200"
-                class="img-fluid"
-                alt=""
-              />
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 bg-intro text-white my-2 order-1">
+                <div class="d-flex flex-column justify-content-center h-100">
+                  <p class="fw-bolder fs-3 text-center">Nuestra Vision</p>
+                  <p class="fs-6" style="text-align: justify">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Optio error ea iusto perferendis animi distinctio suscipit
+                    laboriosam atque, nesciunt eligendi quibusdam consequuntur
+                    doloremque
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 order-0">
+                <img
+                  src="https://picsum.photos/id/15/1200"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid footer">
+      <div class="row w-100 align-items-center justify-content-center">
+        <div class="col-10 text-center">
+          <p class="mb-0 py-2">
+            <i class="fa fa-copyright"></i>
+            Todos los derechos reservados
+          </p>
         </div>
       </div>
     </div>

@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #9eb3d4,
+    #bac5df,
+    #d3d7e9,
+    #eaeaf4,
+    #ffffff
+  );
+
+  font-family: "Poppins", sans-serif;
+}
+
+.brand-title {
+  font-family: "Caveat", cursive;
+  font-size: 35px;
+}
+
 .bg-content {
   background-color: rgba(187, 209, 178, 0.5);
 }
@@ -10,7 +31,7 @@
 }
 
 .card.shape {
-  background-color: slateblue;
+  background: rgba(89, 149, 253, 0.95);
   transition: 1s;
 }
 
@@ -33,6 +54,31 @@ button.shape {
   padding: 0;
 }
 
+.banner-text-float {
+  top: 50px;
+  left: 35px;
+  width: 400px;
+}
+
+.banner-button-float {
+  bottom: 35px;
+  left: 45%;
+  width: 200px;
+}
+
 .social > div {
   background-color: rgb(46, 46, 46);
+}
+
+.bg-intro {
+  background: rgba(81, 102, 138, 0.95);
+}
+
+.card-text-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.footer{
+  background-color: rgba(0, 0, 0, .2);
 }
