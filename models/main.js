@@ -34,40 +34,82 @@ const accountsData = [
   { id: 6, email: "migDD@gmail.com", password: "5599qwe", idUsuario: 6 },
 ];
 
+const roles = [
+  { id: 1, idUser: 2, role: "empresario" },
+  { id: 2, idUser: 3, role: "empresario" },
+  { id: 3, idUser: 1, role: "inversor" },
+  { id: 4, idUser: 6, role: "empresario" },
+  { id: 5, idUser: 4, role: "inversor" },
+  { id: 6, idUser: 5, role: "empresario" },
+];
+
+/* -------------------------------------------------------------------------- */
+/*                                Autenticacion                               */
+/* -------------------------------------------------------------------------- */
 const login = async ({ email, password }) => {
-  const foundUser = accountsData.find(
+  const foundAccount = accountsData.find(
     (user) => user.email === email && user.password === password
   );
 
-  if (!foundUser) {
+  if (!foundAccount) {
     throw "Credenciales invalidas";
+  }
+
+  return foundAccount;
+};
+
+const retrieveUserData = ({ idUser }) => {
+  const foundUser = users.find((user) => user.id === idUser);
+
+  if (!foundUser) {
+    throw "No existe el usuario";
   }
 
   return foundUser;
 };
+/* -------------------------------------------------------------------------- */
 
-const retrieveUserData = async ({ idUser }) => {
-  const foundDataUser = users.find((user) => user.id === idUser);
-
-  if (!foundDataUser) {
-    throw "No existe el usuario";
-  }
-
-  return foundDataUser;
+/* -------------------------------------------------------------------------- */
+/*                              Filtrado de roles                             */
+/* -------------------------------------------------------------------------- */
+const getAllByRole = async ({ role }) => {
+  const filterData = roles
+    .filter((userRole) => userRole.role === role)
+    .map((id) => {
+      return users.find((user) => user.id === id.idUser);
+    });
+  return filterData;
 };
 
-const Main = async () => {
+const getAllUserByRole = async ({ arrIdUsers }) => {};
+/* -------------------------------------------------------------------------- */
+
+const Auth = async () => {
   try {
     const credentials = await login({
       email: "jhCast@hotmail.live",
       password: "vdf321",
     });
     const userData = await retrieveUserData({ idUser: credentials.idUsuario });
-
     console.log(userData);
   } catch (e) {
     console.log(e);
   }
 };
 
-Main();
+// Auth();
+
+const FilterData = async () => {
+  try {
+    const filterByRole = await getAllByRole({ role: "empresario" });
+    if (filterByRole.length > 0) {
+      console.log(filterByRole);
+    } else {
+      console.log("No existen usuarios con ese rol");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+FilterData();
