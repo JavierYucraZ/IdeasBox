@@ -8,11 +8,11 @@
 body {
   background-image: linear-gradient(
     to right bottom,
-    #051937,
-    #194363,
-    #36728e,
-    #5ba4b6,
-    #8ad8dc
+    #50fd63,
+    #75f881,
+    #92f39b,
+    #acecb3,
+    #c4e5c8
   );
 }
 
@@ -71,20 +71,20 @@ form.sign-in-form {
 }
 
 .title {
-  border-bottom: solid rgba(89, 149, 253, 0.95) 3px;
+  border-bottom: solid rgba(79, 117, 87, 0.95) 3px;
   font-size: 2.2rem;
-  color: #fff;
+  color: #000;
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background: rgba(89, 149, 253, 0.95);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(193, 224, 193, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(91, 116, 80, 0.37);
   backdrop-filter: blur(18.5px);
   -webkit-backdrop-filter: blur(18.5px);
-  border: 1px solid rgba(89, 149, 253, 0.95);
+  border: 1px solid rgba(193, 224, 193, 0.95);
   margin: 10px 0;
   height: 55px;
   clip-path: polygon(95% 0, 100% 35%, 100% 100%, 0 100%, 0 0);
@@ -124,14 +124,14 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background: rgba(15, 72, 168, 0.95);
+  background: rgba(119, 221, 99, 0.95);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(18.5px);
   -webkit-backdrop-filter: blur(18.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   outline: none;
   height: 49px;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
@@ -140,7 +140,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #28ee74;
 }
 .panels-container {
   position: absolute;
@@ -195,7 +195,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: #fff;
+  color: #000;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -214,7 +214,7 @@ form.sign-in-form {
 .btn.transparent {
   margin: 0;
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid rgb(85, 102, 86);
   width: 130px;
   height: 41px;
   font-weight: 600;

@@ -16,11 +16,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      class="navbar navbar-expand-lg navbar-light sticky-top bg-light shadow"
+    >
       <div class="container-fluid">
         <a class="navbar-brand px-2" href="#">
           <img
@@ -66,158 +72,230 @@
       </div>
     </nav>
 
-    <div class="container-fluid my-3">
-      <div class="row align-items-center w-100 mx-0">
-        <!-- Secciones -->
-        <div class="col-lg-2">
-          <div class="row text-white mx-sm-2">
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Arte</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Libros y Comics</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Cine</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Comida</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Juegos</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-4 col-lg-12 my-2 px-lg-0">
-              <div class="card rounded-0 shape">
-                <div class="card-content">
-                  <h4 class="text-center fs-5 fw-bold py-2">Musica</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container-fluid">
+      <div class="row mx-0">
         <!-- Banner -->
-        <div class="col-lg-10 position-relative">
-          <img
-            src="https://picsum.photos/id/165/1200/550"
-            class="img-fluid"
-            alt=""
-          />
-
-          <div>
-            <p
-              class="
-                position-absolute
-                fw-bold
-                fs-1
-                text-white text-center
-                d-none d-md-block
-                banner-text-float
-                brand-title
-              "
-            >
-              Financia tu idea, proyecto o negocio
-            </p>
-          </div>
-          <button
-            class="btn btn-success position-absolute shape banner-button-float"
+        <div class="col-12 position-relative px-0">
+          <div
+            id="carouselExampleFade"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
           >
-            Conocer mas...
-          </button>
-        </div>
-        <!-- Redes sociales -->
-        <!-- <div class="col-lg-1 align-self-start social" style="width: 6.333%">
-          <div class="row text-center justify-content-center mx-0">
-            <div class="col-7 px-0">
-              <i class="fa fa-twitter fs-3 my-3 text-light"></i>
-            </div>
-            <div class="col-7 px-0">
-              <i class="fa fa-instagram fs-3 my-3 text-light"></i>
-            </div>
-            <div class="col-7 px-0">
-              <i class="fa fa-facebook fs-3 my-3 text-light"></i>
-            </div>
-            <div class="col-7 px-0">
-              <i class="fa fa-youtube-play fs-3 my-3 text-light"></i>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </div>
-
-    <div class="container my-5" class="my-5">
-      <div>
-        <hr />
-        <p class="text-center mb-5 display-4 fw-bold">Arte</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/251/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div
+                    class="
+                      d-none d-md-block
+                      col-md-4
+                      bg-firstCaption
+                      sideCaption
+                    "
+                  >
+                    <div class="animate__animated animate__slideInUp">
+                      <h2 class="mb-4">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </h2>
+                      <hr />
+                      <p class="fs-5">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo sed impedit nam officiis,
+                      </p>
+                      <a href="#!" class="btn btn-outline-dark">Conocer mas</a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 position-relative">
+                    <img
+                      src="https://picsum.photos/id/125/1200/650"
+                      class="d-block w-100"
+                    />
+                    <div
+                      class="
+                        carousel-caption
+                        d-block d-md-none
+                        card-text-overlay
+                      "
+                    >
+                      <h6 class="px-1">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </h6>
+                      <a href="#!" class="btn btn-dark">Conocer mas</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Destacado 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
-                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
-                      quisquam commodi accusantium tenetur laboriosam earum,
-                      consequuntur odit.
-                    </p>
-                    <a href="" class="stretched-link"> Ver mas... </a>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div
+                    class="
+                      d-none
+                      bg-secondCaption
+                      d-md-block
+                      col-md-4
+                      sideCaption
+                    "
+                  >
+                    <div class="animate__animated animate__slideInUp">
+                      <h2 class="mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                      </h2>
+                      <hr />
+                      <p class="fs-5">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Autem doloremque tempore eos?
+                      </p>
+                      <a href="#!" class="btn btn-outline-dark">Conocer mas</a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 position-relative">
+                    <img
+                      src="https://picsum.photos/id/57/1200/650"
+                      class="d-block w-100"
+                    />
+                    <div
+                      class="
+                        carousel-caption
+                        d-block d-md-none
+                        card-text-overlay
+                      "
+                    >
+                      <h6 class="px-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                      </h6>
+                      <a href="#!" class="btn btn-dark">Conocer mas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div
+                    class="
+                      d-none
+                      bg-thirdCaption
+                      d-md-block
+                      col-md-4
+                      sideCaption
+                    "
+                  >
+                    <div class="animate__animated animate__slideInUp">
+                      <h2 class="mb-4">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </h2>
+                      <hr />
+                      <p class="fs-5">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Excepturi dolores molestias nesciunt. Quibusdam,
+                        amet officia.
+                      </p>
+                      <a href="#!" class="btn btn-outline-dark">Conocer mas</a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 position-relative">
+                    <img
+                      src="https://picsum.photos/id/38/1200/650"
+                      class="d-block w-100"
+                    />
+                    <div
+                      class="
+                        carousel-caption
+                        d-block d-md-none
+                        card-text-overlay
+                      "
+                    >
+                      <h6 class="px-1">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </h6>
+                      <a href="#!" class="btn btn-dark">Conocer mas</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon bg-dark p-2"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon bg-dark p-2"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="col-lg-4 my-2">
-            <div class="card text-white shadow-lg">
+    <div class="container my-5">
+      <div>
+        <h1>Proyectos Destacados</h1>
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Arte</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
               <img
-                src="https://picsum.photos/id/184/500"
+                src="https://picsum.photos/id/258/800/500"
                 class="card-img"
-                alt="..."
               />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <h5 class="card-title">Destacado 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis temporibus incidunt, unde repellat dolorum nulla
-                    obcaecati quod eos quas! Esse accusamu
-                  </p>
-                  <a href="" class="stretched-link text-light">Ver mas...</a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/96/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img
+                src="https://picsum.photos/id/180/800/500"
+                class="card-img"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
@@ -227,53 +305,50 @@
       <div class="my-5">
         <hr />
         <p class="text-center mb-5 display-4 fw-bold">Libros y Comics</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 order-1 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/180/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Destacado 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
-                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
-                      quisquam commodi accusantium tenetur laboriosam earum,
-                      consequuntur odit.
-                    </p>
-                    <a href="" class="stretched-link"> Ver mas... </a>
-                  </div>
-                </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/75/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 order-0 my-2">
-            <div class="card text-white shadow-lg">
-              <img
-                src="https://picsum.photos/id/310/500"
-                class="card-img"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <div class="card-text-overlay">
-                    <h5 class="card-title">Destacado 2</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Perferendis temporibus incidunt, unde repellat dolorum
-                      nulla obcaecati quod eos quas! Esse accusamu
-                    </p>
-                    <a href="" class="stretched-link text-light">Ver mas...</a>
-                  </div>
-                </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/12/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/9/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
@@ -283,52 +358,50 @@
       <div class="my-5">
         <hr />
         <p class="text-center mb-5 display-4 fw-bold">Cine</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/316/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <div>
-                      <h5 class="card-title">Destacado 1</h5>
-                      <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Provident mollitia nemo, et ullam omnis minima.
-                        Voluptas, dolorum consequuntur! Reprehenderit mollitia
-                        iusto ipsam quisquam commodi accusantium tenetur
-                        laboriosam earum, consequuntur odit.
-                      </p>
-                      <a href="" class="stretched-link"> Ver mas... </a>
-                    </div>
-                  </div>
-                </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/65/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 my-2">
-            <div class="card text-white shadow-lg">
-              <img
-                src="https://picsum.photos/id/327/500"
-                class="card-img"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <h5 class="card-title">Destacado 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Consequuntur necessitatibus dignissimos
-                  </p>
-                  <a href="" class="stretched-link text-light">Ver mas...</a>
-                </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/23/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/7/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
@@ -338,51 +411,56 @@
       <div class="my-5">
         <hr />
         <p class="text-center mb-5 display-4 fw-bold">Comida</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 order-1 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/327/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Destacado 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
-                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
-                      quisquam commodi accusantium tenetur laboriosam earum,
-                      consequuntur odit.
-                    </p>
-                    <a href="" class="stretched-link"> Ver mas... </a>
-                  </div>
-                </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img
+                src="https://picsum.photos/id/1010/800/500"
+                class="card-img"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 order-0 my-2">
-            <div class="card text-white shadow-lg">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
               <img
-                src="https://picsum.photos/id/33/500"
+                src="https://picsum.photos/id/159/800/500"
                 class="card-img"
-                alt="..."
               />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <h5 class="card-title">Destacado 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis temporibus incidunt, unde repellat dolorum nulla
-                    obcaecati quod eos quas! Esse accusamu
-                  </p>
-                  <a href="" class="stretched-link text-light">Ver mas...</a>
-                </div>
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/62/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
@@ -392,51 +470,50 @@
       <div class="my-5">
         <hr />
         <p class="text-center mb-5 display-4 fw-bold">Juegos</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/35/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Destacado 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
-                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
-                      quisquam commodi accusantium tenetur laboriosam earum,
-                      consequuntur odit.
-                    </p>
-                    <a href="" class="stretched-link"> Ver mas... </a>
-                  </div>
-                </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/29/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 my-2">
-            <div class="card text-white shadow-lg">
-              <img
-                src="https://picsum.photos/id/350/500"
-                class="card-img"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <h5 class="card-title">Destacado 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis temporibus incidunt, unde repellat dolorum nulla
-                    obcaecati quod eos quas! Esse accusamu
-                  </p>
-                  <a href="" class="stretched-link text-light">Ver mas...</a>
-                </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/33/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/20/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
               </div>
             </div>
           </div>
@@ -446,51 +523,105 @@
       <div class="my-5">
         <hr />
         <p class="text-center mb-5 display-4 fw-bold">Musica</p>
-        <div class="row align-items-center">
-          <div class="col-lg-8 order-1 my-2">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="https://picsum.photos/id/435/1200"
-                    class="card-img"
-                    alt="destacadoArte"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Destacado 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Provident mollitia nemo, et ullam omnis minima. Voluptas,
-                      dolorum consequuntur! Reprehenderit mollitia iusto ipsam
-                      quisquam commodi accusantium tenetur laboriosam earum,
-                      consequuntur odit.
-                    </p>
-                    <a href="" class="stretched-link"> Ver mas... </a>
-                  </div>
-                </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/10/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/90/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores accusamus voluptate veniam optio amet. Saepe eius
+                  fugiat ad ea soluta?
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 col-lg-4 my-2">
+            <div
+              class="card border-0 bg-transparent shadow-sm card-outstanding"
+            >
+              <img src="https://picsum.photos/id/60/800/500" class="card-img" />
+              <div class="card-body">
+                <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, laudantium. Expedita
+                </p>
+                <a href="#!" class="stretched-link">Ver mas...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Secciones -->
+      <h1>Categorias</h1>
+      <hr />
+      <div class="row justify-content-around">
+        <div class="col-lg-3 my-3">
+          <div class="card rounded-0 shape">
+            <div class="card-content">
+              <h4 class="text-center fs-5 fw-bold py-3">Arte</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 my-3">
+          <div class="card rounded-0 shape">
+            <div class="card-content">
+              <h4 class="text-center fs-5 fw-bold py-3">Libros y Comics</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 my-3">
+          <div class="card rounded-0 shape">
+            <div class="card-content">
+              <h4 class="text-center fs-5 fw-bold py-3">Cine</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-around">
+          <div class="col-lg-3 my-3">
+            <div class="card rounded-0 shape">
+              <div class="card-content">
+                <h4 class="text-center fs-5 fw-bold py-3">Comida</h4>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 order-0 my-2">
-            <div class="card text-white shadow-lg">
-              <img
-                src="https://picsum.photos/id/450/500"
-                class="card-img"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <div class="card-text-overlay">
-                  <h5 class="card-title">Destacado 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Perferendis temporibus incidunt, unde repellat dolorum nulla
-                    obcaecati quod eos quas! Esse accusamu
-                  </p>
-                  <a href="" class="stretched-link text-light">Ver mas...</a>
-                </div>
+          <div class="col-lg-3 my-3">
+            <div class="card rounded-0 shape">
+              <div class="card-content">
+                <h4 class="text-center fs-5 fw-bold py-3">Juegos</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 my-3">
+            <div class="card rounded-0 shape">
+              <div class="card-content">
+                <h4 class="text-center fs-5 fw-bold py-3">Musica</h4>
               </div>
             </div>
           </div>
@@ -525,11 +656,12 @@
             </div>
           </div>
         </div>
+        <hr class="d-block d-md-none my-5" />
         <!-- Mision -->
         <div class="col-lg-6">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 bg-intro text-white my-2 order-1">
+              <div class="col-lg-6 bg-intro text-white my-2 order-md-1">
                 <div class="d-flex flex-column justify-content-center h-100">
                   <p class="fw-bolder fs-3 text-center">Nuestra Vision</p>
                   <p class="fs-6" style="text-align: justify">
