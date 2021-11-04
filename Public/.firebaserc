@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ideasbox-9d842": {
+      "hosting": {
+        "IdeasBox": [
+          "ideasbox-9d842"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ideasbox-9d842"
+  }
+}

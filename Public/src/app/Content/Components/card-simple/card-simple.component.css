@@ -1,0 +1,9 @@
+.card-outstanding {
+  filter: brightness(1);
+  transition: 0.5s;
+}
+
+.card-outstanding:hover {
+  filter: brightness(1.1);
+  transition: 0.5s;
+}

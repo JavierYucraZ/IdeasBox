@@ -1,0 +1,98 @@
+<div id="body" class="pt-4 animate__animated animate__fadeIn">
+  <div class="container">
+    <div class="row justify-content-around align-items-center">
+      <div class="col-lg-5">
+        <div class="my-2">
+          <a href="#!" class="text-decoration-none">
+            <span class="badge bg-primary">{{ dataItem.categoria }}</span>
+          </a>
+        </div>
+        <img [src]="dataItem.urlLarge" class="img-fluid" alt="" />
+        <p class="text-secondary">Patrocinadores : {{ dataItem.sponsors }}</p>
+      </div>
+      <div class="col-lg-6">
+        <ng-container *ngIf="description; else elseTemplate">
+          <div class="animate__animated animate__fadeInDownBig">
+            <app-description [dataItem]="dataItem"></app-description>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div class="animate__animated animate__fadeInDownBig">
+            <app-donate></app-donate>
+          </div>
+        </ng-template>
+        <div>
+          <button
+            class="btn rounded-0 w-100 py-3 btnSponsor"
+            [ngClass]="{
+              'btn-success': description,
+              'btn-primary': !description
+            }"
+            (click)="changeComponent()"
+          >
+            {{ description ? "Patrocinar este proyecto" : "Enviar patrocinio" }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="container my-5">
+    <h3>Proyectos que te pueden interesar</h3>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-10 col-lg-4 my-2">
+        <div class="card border-0 bg-transparent shadow-sm card-outstanding">
+          <img src="https://picsum.photos/id/10/800/500" class="card-img" />
+          <div class="card-body">
+            <h5 class="card-title">Lorem, ipsum dolor.</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+              laudantium. Expedita
+            </p>
+            <a href="#!" class="stretched-link">Ver mas...</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-lg-4 my-2">
+        <div class="card border-0 bg-transparent shadow-sm card-outstanding">
+          <img src="https://picsum.photos/id/90/800/500" class="card-img" />
+          <div class="card-body">
+            <h5 class="card-title">Lorem, ipsum dolor.</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              accusamus voluptate veniam optio amet. Saepe eius fugiat ad ea
+              soluta?
+            </p>
+            <a href="#!" class="stretched-link">Ver mas...</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-lg-4 my-2">
+        <div class="card border-0 bg-transparent shadow-sm card-outstanding">
+          <img src="https://picsum.photos/id/60/800/500" class="card-img" />
+          <div class="card-body">
+            <h5 class="card-title">Lorem, ipsum dolor.</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+              laudantium. Expedita
+            </p>
+            <a href="#!" class="stretched-link">Ver mas...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid footer">
+    <div class="row w-100 align-items-center justify-content-center">
+      <div class="col-10 text-center">
+        <p class="mb-0 py-2">
+          <i class="fa fa-copyright"></i>
+          Todos los derechos reservados
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

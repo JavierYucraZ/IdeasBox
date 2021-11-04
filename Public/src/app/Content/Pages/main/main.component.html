@@ -1,0 +1,100 @@
+<div id="body" class="animate__animated animate__fadeIn">
+  <div class="container-fluid">
+    <div class="row mx-0">
+      <!-- Banner -->
+      <div class="col-12 position-relative px-0">
+        <app-carousel></app-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div>
+      <h1>Proyectos Destacados</h1>
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Arte</p>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-lg-4 my-2" *ngFor="let itemArte of Arte">
+          <app-card-simple [dataItem]="itemArte"></app-card-simple>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Libros y Comics</p>
+      <div class="row align-items-center justify-content-center">
+        <div
+          class="col-10 col-lg-4 my-2"
+          *ngFor="let itemLibComics of LibComics"
+        >
+          <app-card-simple [dataItem]="itemLibComics"></app-card-simple>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Cine</p>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-lg-4 my-2" *ngFor="let itemCine of Cine">
+          <app-card-simple [dataItem]="itemCine"></app-card-simple>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Comida</p>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-lg-4 my-2" *ngFor="let itemComida of Comida">
+          <app-card-simple [dataItem]="itemComida"></app-card-simple>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Juegos</p>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-lg-4 my-2" *ngFor="let itemJuego of Juegos">
+          <app-card-simple [dataItem]="itemJuego"></app-card-simple>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <hr />
+      <p class="text-center mb-5 display-4 fw-bold">Musica</p>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-lg-4 my-2" *ngFor="let itemMusica of Musica">
+          <app-card-simple [dataItem]="itemMusica"></app-card-simple>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Secciones -->
+    <h1>Categorias</h1>
+    <hr />
+    <div class="row justify-content-around">
+      <div class="col-lg-4 my-3" *ngFor="let itemCategoria of categorias">
+        <app-categorias [dataCategoria]="itemCategoria"></app-categorias>
+      </div>
+    </div>
+  </div>
+
+  <app-mision-vision></app-mision-vision>
+
+  <div class="container-fluid footer">
+    <div class="row w-100 align-items-center justify-content-center">
+      <div class="col-10 text-center">
+        <p class="mb-0 py-2">
+          <i class="fa fa-copyright"></i>
+          Todos los derechos reservados
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

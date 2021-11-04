@@ -1,0 +1,63 @@
+<div id="sidebar" class="active">
+  <div class="sidebar-wrapper active">
+    <div class="sidebar-header">
+      <div class="d-flex justify-content-between">
+        <div class="logo">
+          <a href="./index.php"> IdeasBox Administracion </a>
+        </div>
+        <div class="toggler">
+          <a href="#" class="sidebar-hide d-xl-none d-block"
+            ><i class="bi bi-x bi-middle"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-menu">
+      <ul class="menu">
+        <li class="sidebar-title">Menu</li>
+
+        <li class="sidebar-item">
+          <a href="./index.php" class="sidebar-link">
+            <i class="bi bi-grid-fill"></i>
+            <span>Inicio</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./Aceptados.php" class="sidebar-link">
+            <i class="bi bi-clipboard-check"></i>
+            <span>Proyectos Aceptados</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./Pendientes.php" class="sidebar-link">
+            <i class="bi bi-clipboard-x"></i>
+            <span>Proyectos Pendientes</span>
+          </a>
+        </li>
+
+        <hr />
+
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link" onclick="logout()">
+            <i class="bi bi-door-open-fill text-danger"></i>
+            <span class="text-danger">Cerrar Sesion</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="sidebar-toggler btn x">
+      <i data-feather="x"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+  const logout = () => {
+    localStorage.clear();
+    setTimeout(() => {
+      window.location.href = "http://localhost:4200/";
+    }, 1000);
+  };
+</script>

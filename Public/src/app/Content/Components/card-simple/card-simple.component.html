@@ -1,0 +1,14 @@
+<div class="card border-0 bg-transparent shadow-sm card-outstanding">
+  <img [src]="dataItem.url" class="card-img" />
+  <div class="card-body">
+    <h5 class="card-title">{{ dataItem.title }}</h5>
+    <p class="card-text">
+      {{ dataItem.shortDescription }}
+    </p>
+    <a
+      [routerLink]="['/Detalle-Proyecto', dataItem.id]"
+      class="stretched-link text-dark"
+      >Ver mas...</a
+    >
+  </div>
+</div>

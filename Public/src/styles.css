@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: none !important;
+}
+
+.card {
+  border: none !important;
+}
+
+.shape {
+  clip-path: polygon(90% 0, 100% 35%, 100% 100%, 0 100%, 0 0);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5) !important;
+  cursor: pointer;
+  transition: clip-path 0.2s;
+}
+
+.card.shape {
+  background: rgba(89, 149, 253, 0.95);
+  transition: 1s;
+}
+
+.card.shape:hover {
+  background-color: rgb(76, 53, 221);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+button.shape {
+  border-radius: 0 !important;
+  border-bottom: none;
+}
+
+.shape:hover {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.2);
+}

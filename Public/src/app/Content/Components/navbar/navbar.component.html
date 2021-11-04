@@ -1,0 +1,88 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark shadow border-0"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand px-2 border-0" routerLink="Inicio">
+      <img
+        src="./assets/logo.png"
+        alt=""
+        width="45"
+        height="45"
+        class="d-inline-block"
+      />
+      <span class="ms-2 brand-title"> IDEAS BOX </span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-3" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="userEmail"
+            data-bs-toggle="dropdown"
+          >
+            {{ name }}
+          </a>
+          <ul class="dropdown-menu">
+            <div>
+              <li>
+                <a class="dropdown-item" routerLink="/Crear-Proyecto"
+                  >Crear Proyecto</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+            </div>
+            <li><hr class="dropdown-divider" /></li>
+            <li class="text-center">
+              <button
+                class="btn btn-danger rounded-0 border-0"
+                id="logout"
+                style="cursor: pointer"
+                (click)="logout()"
+              >
+                <i class="fas fa-door-open"></i>
+                Cerrar Sesion
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Arte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Libros y Comics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cine</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Comida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Juegos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Musica</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <!-- <div id="login">
+              <a
+                href="./Auth/index.html"
+                class="btn btn-danger rounded-0 shape ms-2"
+              >
+                Iniciar Sesion
+              </a>
+            </div> -->
+      </div>
+    </div>
+  </div>
+</nav>

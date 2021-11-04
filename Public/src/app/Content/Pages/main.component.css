@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+#body {
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f7f7f7,
+    #efefef,
+    #e7e7e7
+  );
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.card-text-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
