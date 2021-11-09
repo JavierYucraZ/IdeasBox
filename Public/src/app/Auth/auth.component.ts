@@ -35,6 +35,7 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.title = 'IdeasBox | Bienvenido';
     if (localStorage.getItem('userLog')) {
       this.router.navigate(['']);
     }
@@ -63,6 +64,7 @@ export class AuthComponent implements OnInit {
 
   async onLoginSubmit() {
     try {
+      this.loading.nativeElement.classList.remove('d-none');
       const { user } = await this.authFire.signInWithEmailAndPassword(
         this.loginForm.value.emailSignIn,
         this.loginForm.value.passwordSignIn
@@ -93,6 +95,7 @@ export class AuthComponent implements OnInit {
     } catch (error: any) {
       Swal.fire('Error', error.message, 'error');
     }
+    this.loading.nativeElement.classList.add('d-none');
   }
 
   async onRegisterSubmit() {
@@ -101,6 +104,7 @@ export class AuthComponent implements OnInit {
       pais: this.registerForm.value.paisSignUp,
       rol: this.registerForm.value.rolSignUp,
       genero: this.registerForm.value.genero,
+      saldo: 1000,
     };
     this.loading.nativeElement.classList.remove('d-none');
     if (
@@ -116,7 +120,6 @@ export class AuthComponent implements OnInit {
       );
       await this.firestore.collection('users').doc(user?.uid).set(dataRegister);
       user?.sendEmailVerification();
-      this.loading.nativeElement.classList.add('d-none');
       Swal.fire(
         'Registro correcto',
         'Verifique su correo e inicie sesion por favor',
@@ -126,6 +129,7 @@ export class AuthComponent implements OnInit {
     } catch (error: any) {
       Swal.fire('Error', error.message, 'error');
     }
+    this.loading.nativeElement.classList.add('d-none');
   }
 
   modeSignUp() {

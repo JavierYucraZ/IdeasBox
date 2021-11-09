@@ -8,25 +8,30 @@
       <div class="row">
         <div class="d-none d-md-block col-md-4 bg-firstCaption sideCaption">
           <div class="animate__animated animate__slideInUp">
-            <h2 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h2 class="mb-4">{{ outstanding[0].titulo }}</h2>
             <hr />
             <p class="fs-5">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo sed
-              impedit nam officiis,
+              {{ outstanding[0].descripcion | slice: 0:120 }}...
             </p>
-            <a href="./pages/detalle.html" class="btn btn-outline-dark"
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[0].id]"
+              class="btn btn-outline-dark"
               >Conocer mas</a
             >
           </div>
         </div>
         <div class="col-12 col-md-8 position-relative">
           <img
-            src="https://picsum.photos/id/125/1200/650"
+            [src]="outstanding[0].poster"
             class="d-block w-100"
           />
           <div class="carousel-caption d-block d-md-none card-text-overlay">
-            <h6 class="px-1">Lorem ipsum dolor sit amet consectetur.</h6>
-            <a href="./pages/detalle.html" class="btn btn-dark">Conocer mas</a>
+            <h6 class="px-1">{{ outstanding[0].titulo }}</h6>
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[0].id]"
+              class="btn btn-dark"
+              >Conocer mas</a
+            >
           </div>
         </div>
       </div>
@@ -35,29 +40,32 @@
       <div class="row">
         <div class="d-none bg-secondCaption d-md-block col-md-4 sideCaption">
           <div class="animate__animated animate__slideInUp">
-            <h2 class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing.
-            </h2>
+            <h2 class="mb-4">{{ outstanding[1].titulo }}</h2>
             <hr />
             <p class="fs-5">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-              doloremque tempore eos?
+              {{ outstanding[1].descripcion | slice: 0:120 }}...
             </p>
-            <a href="./pages/detalle.html" class="btn btn-outline-dark"
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[1].id]"
+              class="btn btn-outline-dark"
               >Conocer mas</a
             >
           </div>
         </div>
         <div class="col-12 col-md-8 position-relative">
           <img
-            src="https://picsum.photos/id/57/1200/650"
+            [src]="outstanding[1].poster"
             class="d-block w-100"
           />
           <div class="carousel-caption d-block d-md-none card-text-overlay">
             <h6 class="px-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing.
+              {{ outstanding[1].titulo }}
             </h6>
-            <a href="./pages/detalle.html" class="btn btn-dark">Conocer mas</a>
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[1].id]"
+              class="btn btn-dark"
+              >Conocer mas</a
+            >
           </div>
         </div>
       </div>
@@ -66,25 +74,62 @@
       <div class="row">
         <div class="d-none bg-thirdCaption d-md-block col-md-4 sideCaption">
           <div class="animate__animated animate__slideInUp">
-            <h2 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h2 class="mb-4">{{ outstanding[2].titulo }}</h2>
             <hr />
             <p class="fs-5">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Excepturi dolores molestias nesciunt. Quibusdam, amet officia.
+              {{ outstanding[2].descripcion | slice: 0:120 }}...
             </p>
-            <a href="./pages/detalle.html" class="btn btn-outline-dark"
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[2].id]"
+              class="btn btn-outline-dark"
               >Conocer mas</a
             >
           </div>
         </div>
         <div class="col-12 col-md-8 position-relative">
           <img
-            src="https://picsum.photos/id/38/1200/650"
+            [src]="outstanding[2].poster"
             class="d-block w-100"
           />
           <div class="carousel-caption d-block d-md-none card-text-overlay">
-            <h6 class="px-1">Lorem ipsum dolor sit amet consectetur.</h6>
-            <a href="./pages/detalle.html" class="btn btn-dark">Conocer mas</a>
+            <h6 class="px-1">{{ outstanding[2].titulo }}</h6>
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[2].id]"
+              class="btn btn-dark"
+              >Conocer mas</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="d-none bg-fourthCaption d-md-block col-md-4 sideCaption">
+          <div class="animate__animated animate__slideInUp">
+            <h2 class="mb-4">{{ outstanding[3].titulo }}</h2>
+            <hr />
+            <p class="fs-5">
+              {{ outstanding[3].descripcion | slice: 0:120 }}...
+            </p>
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[3].id]"
+              class="btn btn-outline-dark"
+              >Conocer mas</a
+            >
+          </div>
+        </div>
+        <div class="col-12 col-md-8 position-relative">
+          <img
+            [src]="outstanding[3].poster"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption d-block d-md-none card-text-overlay">
+            <h6 class="px-1">{{ outstanding[3].titulo }}</h6>
+            <a
+              [routerLink]="['/Detalle-Proyecto/', outstanding[3].id]"
+              class="btn btn-dark"
+              >Conocer mas</a
+            >
           </div>
         </div>
       </div>

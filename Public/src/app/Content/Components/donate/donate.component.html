@@ -4,7 +4,7 @@
     <div class="card border-0 rounded-0 bg-transparent">
       <div>Tarjeta de Crédito</div>
       <div class="card-body">
-        <form>
+        <form [formGroup]="sponsorForm" (ngSubmit)="onSponsorSubmit()">
           <div class="mb-2">
             <input
               type="text"
@@ -52,6 +52,7 @@
               type="text"
               placeholder="Monto de patrocinio"
               class="form-control"
+              formControlName="amount"
             />
           </div>
 
@@ -73,6 +74,12 @@
                 />
               </div>
             </div>
+          </div>
+
+          <div>
+            <button class="btn btn-primary rounded-0 w-100 py-3 btnSponsor">
+              Enviar Patrocinio
+            </button>
           </div>
         </form>
       </div>

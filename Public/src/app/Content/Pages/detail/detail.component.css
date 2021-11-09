@@ -1,0 +1,23 @@
+.img-container {
+  position: relative;
+}
+
+.like {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like:hover {
+  color: rgb(255, 35, 35);
+  transition: 0.3s;
+}
+
+.dislike {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dislike:hover {
+  color: slateblue;
+  transition: 0.3s;
+}

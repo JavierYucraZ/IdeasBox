@@ -2,9 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { FilePondOptions } from 'filepond';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ProyectsService } from '../../Services/proyects.service';
 
@@ -26,7 +25,6 @@ export class CreateProyectComponent implements OnInit {
   constructor(
     private store: AngularFireStorage,
     private fb: FormBuilder,
-    private firestore: AngularFirestore,
     private proyectsService: ProyectsService
   ) {
     this.createForm = this.fb.group({});
@@ -34,6 +32,7 @@ export class CreateProyectComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.title = 'IdeasBox | Creacion de Proyecto';
     this.createForm = this.fb.group({
       title: [''],
       category: ['Arte'],
@@ -43,7 +42,6 @@ export class CreateProyectComponent implements OnInit {
   }
 
   pondHandleAddFile(event: any) {
-    // console.log('A file was added', event.file.getFileEncodeBase64String());
     this.imageB64 = event.file.getFileEncodeBase64String();
   }
 

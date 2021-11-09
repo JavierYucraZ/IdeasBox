@@ -1,9 +1,9 @@
-<div class="card border-0 bg-transparent shadow-sm card-outstanding">
-  <img [src]="dataItem.url" class="card-img" />
+<div class="card border-0 bg-light shadow-sm card-outstanding text-dark">
+  <img [src]="dataItem.poster" class="card-img" />
   <div class="card-body">
-    <h5 class="card-title">{{ dataItem.title }}</h5>
+    <h5 class="card-title">{{ dataItem.titulo }}</h5>
     <p class="card-text">
-      {{ dataItem.shortDescription }}
+      {{ dataItem.descripcion | slice: 0:150 }}...
     </p>
     <a
       [routerLink]="['/Detalle-Proyecto', dataItem.id]"

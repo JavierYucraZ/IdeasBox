@@ -1,18 +1,20 @@
-<h1>{{ dataItem.title }}</h1>
-<p class="text-muted fw-bolder">Autor : {{ dataItem.author }}</p>
+<h1>{{ dataItem.titulo }}</h1>
+<p class="text-muted fw-bolder">Autor : {{ autor }}</p>
 <hr />
 
 <p class="fs-4">Descripcion del proyecto</p>
 <p class="text-muted lh-lg">
-  {{ dataItem.longDescription }}
+  {{ dataItem.descripcion }}
 </p>
 
 <hr />
 
-<p class="text-success">
-  Fondos recaudados : {{ dataItem.collected | currency: "Bs" }}
+<p class="text-dark">
+  Fondos recaudados : {{ dataItem.recaudado }}$ de {{ dataItem.meta }}$
+  <span
+    class="progress-bar text-dark"
+    style="height: 50px"
+    [ngStyle]="{ width: width + '%', backgroundColor: bgColor }"
+  >
+  </span>
 </p>
-
-
-
-

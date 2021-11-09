@@ -14,12 +14,53 @@ class Proyecto extends Conexion{
     public function getAllByCategory($category){
         $conexion = parent::Conexion();
         parent::set_names();
-        $sql = "SELECT * FROM proyectos WHERE categoria = :category";
+        $sql = "SELECT * FROM proyectos WHERE categoria = :category AND status = 'accepted' ORDER BY votos DESC";
         $sql = $conexion -> prepare($sql);
         $sql -> bindParam(":category",$category);
         $sql -> execute();
         $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
         return $resultado;
+    }
+
+    public function getBestsByCategory($category){
+        $conexion = parent::Conexion();
+        parent::set_names();
+        $sql = "SELECT * FROM proyectos WHERE categoria = :category AND status = 'accepted' ORDER BY votos DESC LIMIT 3";
+        $sql = $conexion -> prepare($sql);
+        $sql -> bindParam(":category",$category);
+        $sql -> execute();
+        $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
+
+    public function getBests(){
+        $conexion = parent::Conexion();
+        parent::set_names();
+        $sql = "SELECT * FROM proyectos WHERE status = 'accepted' ORDER BY votos DESC LIMIT 4";
+        $sql = $conexion -> prepare($sql);
+        $sql -> execute();
+        $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
+
+    public function sponsorProyect($id, $amount){
+        $conexion = parent::Conexion();
+        parent::set_names();
+        
+        $sql = $conexion -> prepare("SELECT recaudado,patrocinadores FROM proyectos WHERE id = :id");
+        $sql -> bindValue(":id",$id);
+        $sql -> execute();
+        $data = $sql -> fetch(PDO::FETCH_ASSOC);
+        $collected = $data['recaudado'] + $amount;
+        $sponsors = $data['patrocinadores'] + 1;
+
+        $sql = "UPDATE proyectos SET recaudado = :collected, patrocinadores = :sponsors WHERE id = :id";
+        $sql = $conexion -> prepare($sql);
+        $sql -> bindValue(":collected",$collected);
+        $sql -> bindValue(":sponsors",$sponsors);
+        $sql -> bindValue(":id",$id);
+        $sql -> execute();
+        return "Patrocinio realizado";
     }
 
     public function getAllPending(){
@@ -35,7 +76,7 @@ class Proyecto extends Conexion{
     public function getAllAccepted(){
         $conexion = parent::Conexion();
         parent::set_names();
-        $sql = "SELECT * FROM proyectos WHERE status = 'accepted'";
+        $sql = "SELECT * FROM proyectos WHERE status = 'accepted' ORDER BY votos DESC";
         $sql = $conexion -> prepare($sql);
         $sql -> execute();
         $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
@@ -45,7 +86,7 @@ class Proyecto extends Conexion{
     public function getOneByID($id){
         $conexion = parent::Conexion();
         parent::set_names();
-        $sql = "SELECT * FROM proyectos WHERE id = :id";
+        $sql = "SELECT * FROM proyectos WHERE id = :id AND status = 'accepted'";
         $sql = $conexion -> prepare($sql);
         $sql -> bindValue(":id",$id);
         $sql -> execute();
@@ -68,15 +109,15 @@ class Proyecto extends Conexion{
         $conexion = parent::Conexion();
         parent::set_names();
         
-        $sql = $conexion -> prepare("SELECT vote_up FROM proyectos WHERE id = :id");
+        $sql = $conexion -> prepare("SELECT votos FROM proyectos WHERE id = :id");
         $sql -> bindValue(":id",$id);
         $sql -> execute();
-        $vote_up = $sql -> fetch(PDO::FETCH_ASSOC);
-        $vote_up = $vote_up['vote_up'] + 1;
+        $vote = $sql -> fetch(PDO::FETCH_ASSOC);
+        $vote = $vote['votos'] + 1;
 
-        $sql = "UPDATE proyectos SET vote_up = :vote_up WHERE id = :id";
+        $sql = "UPDATE proyectos SET votos = :vote WHERE id = :id";
         $sql = $conexion -> prepare($sql);
-        $sql -> bindValue(":vote_up",$vote_up);
+        $sql -> bindValue(":vote",$vote);
         $sql -> bindValue(":id",$id);
         $sql -> execute();
         return "Like realizado";
@@ -86,13 +127,15 @@ class Proyecto extends Conexion{
         $conexion = parent::Conexion();
         parent::set_names();
         
-        $sql = $conexion -> prepare("SELECT vote_down FROM proyectos WHERE id = :id");
-        $vote_down = $sql -> fetch(PDO::FETCH_ASSOC);
-        $vote_down = $vote_down['vote_down'] + 1;
+        $sql = $conexion -> prepare("SELECT votos FROM proyectos WHERE id = :id");
+        $sql -> bindValue(":id",$id);
+        $sql -> execute();
+        $vote = $sql -> fetch(PDO::FETCH_ASSOC);
+        $vote = $vote['votos'] - 1;
 
-        $sql = "UPDATE proyectos SET vote_down = :vote_down WHERE id = :id";
+        $sql = "UPDATE proyectos SET votos = :vote WHERE id = :id";
         $sql = $conexion -> prepare($sql);
-        $sql -> bindValue(":vote_down",$vote_down);
+        $sql -> bindValue(":vote",$vote);
         $sql -> bindValue(":id",$id);
         $sql -> execute();
         return "Dislike realizado";
@@ -174,6 +217,17 @@ class Proyecto extends Conexion{
         $sql -> bindValue(":id",$id);
         $sql -> execute();
         return "Eliminado correctamente";
+    }
+
+    public function getSumCollectedByCategory($category){
+        $conexion = parent::Conexion();
+        parent::set_names();
+        $sql = "SELECT SUM(`recaudado`) AS Total FROM `proyectos` WHERE categoria = :category";
+        $sql = $conexion -> prepare($sql);
+        $sql -> bindParam(":category",$category);
+        $sql -> execute();
+        $resultado = $sql -> fetch(PDO::FETCH_ASSOC);
+        return $resultado;
     }
 }
 

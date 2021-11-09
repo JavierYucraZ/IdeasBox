@@ -16,6 +16,18 @@ switch ($_GET['service']) {
         $result = $proyecto -> getAllByCategory($body['category']);
         echo json_encode($result);
         break;
+    case "getBestsByCategory":
+        $result = $proyecto -> getBestsByCategory($body['category']);
+        echo json_encode($result);
+        break;
+    case "getBests":
+        $result = $proyecto -> getBests();
+        echo json_encode($result);
+        break;
+    case "sponsorProyect":
+        $result = $proyecto -> sponsorProyect($body['id'],$body['amount']);
+        echo json_encode($result);
+        break;
     case 'getAllPending':
         $result = $proyecto -> getAllPending();
         echo json_encode($result);
@@ -70,6 +82,10 @@ switch ($_GET['service']) {
         break;
     case 'deleteOne':
         $result = $proyecto -> deleteProyect($body['id']);
+        echo json_encode($result);
+        break;
+    case "getSumCollectedByCategory":
+        $result = $proyecto -> getSumCollectedByCategory($body['category']);
         echo json_encode($result);
         break;
 }

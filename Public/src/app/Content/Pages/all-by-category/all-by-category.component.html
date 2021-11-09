@@ -1,0 +1,17 @@
+<div class="container py-5 animate__animated animate__fadeIn">
+  <ng-container *ngIf="proyectos.length > 0; else elseTemplate">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-10 col-lg-4 my-2" *ngFor="let itemProyecto of proyectos">
+        <app-card-simple [dataItem]="itemProyecto"></app-card-simple>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+    <div class="alert alert-secondary text-center" role="alert">
+      <h4 class="alert-heading">Aun no tenemos proyectos para mostrar</h4>
+      <hr />
+      <p>Regresa en unos dias para encontrar mas novedades</p>
+    </div>
+  </ng-template>
+</div>

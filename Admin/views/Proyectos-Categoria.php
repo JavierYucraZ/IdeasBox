@@ -2,10 +2,10 @@
 
 include("./../config/session.php");
 
-$title = "Proyectos pendientes";
+$title = "Proyectos por categoria";
 include("./shared/head.php");
 
-include('./php/requestDataModel.php');
+include('./php/requestProyectsByCategory.php');
 
 ?>
 </head>
@@ -21,7 +21,7 @@ include('./php/requestDataModel.php');
             </header>
 
             <div class="page-heading">
-                <h3>Proyectos pendientes</h3>
+                <h3>Proyectos por Categoria : <?= $_GET['c'] ?></h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -29,7 +29,7 @@ include('./php/requestDataModel.php');
                         <div class="card p-3">
                             <div class="row justify-content-between text-center">
                                 <div class="col-12">
-                                    <?php foreach($accepted as $index => $proyect) :?>
+                                    <?php foreach($allByCategory as $index => $proyect) :?>
                                     <div class="card border p-2 shadow-sm">
                                         <div class="row align-items-center justify-content-center">
                                             <div class="col-5 col-lg-3">
@@ -48,9 +48,17 @@ include('./php/requestDataModel.php');
                                                         Categoria : <?= $proyect['categoria'] ?>
                                                     </p>
                                                 </div>
+                                                <div class="d-flex justify-content-around">
+                                                    <p class="mt-3 text-success">
+                                                        Monto Recaudado : <?= $proyect['recaudado'] ?>
+                                                    </p>
+                                                    <p class="mt-3 text-primary">
+                                                        Patrocinadores : <?= $proyect['patrocinadores'] ?>
+                                                    </p>
+                                                </div>
 
-                                                <hr />
-                                                <button class="btn btn-success">Eliminar</button>
+                                                <!-- <hr /> -->
+                                                <!-- <button class="btn btn-danger">Eliminar</button> -->
                                             </div>
                                         </div>
                                     </div>

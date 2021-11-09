@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProyectsService } from '../../Services/proyects.service';
 
 @Component({
   selector: 'app-carousel',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
-  constructor() {}
+  outstanding: any;
+  constructor(private proyects: ProyectsService) {
+    this.outstanding = [{}, {}, {}, {}, {}];
+  }
 
-  ngOnInit(): void {}
+  async ngOnInit() {
+    this.outstanding = await this.proyects.getBests();
+  }
 }

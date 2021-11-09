@@ -17,14 +17,11 @@ export class PrincipalComponent implements OnInit {
   public Musica: any;
 
   public categorias;
-  public destacados;
 
   constructor(
-    private destacadosService: DestacadosService,
     private categoriaService: CategoriasService,
     private proyects: ProyectsService
   ) {
-    this.destacados = this.destacadosService.destacadosTotal;
     this.categorias = this.categoriaService.categorias;
     this.Arte = [];
     this.LibComics = [];
@@ -35,13 +32,12 @@ export class PrincipalComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.Arte = this.destacados.filter((item) => item.categoria === 'Arte');
-    this.LibComics = this.destacados.filter(
-      (item) => item.categoria === 'LibrosComics'
-    );
-    this.Cine = this.destacados.filter((item) => item.categoria === 'Cine');
-    this.Comida = this.destacados.filter((item) => item.categoria === 'Comida');
-    this.Juegos = this.destacados.filter((item) => item.categoria === 'Juegos');
-    this.Musica = this.destacados.filter((item) => item.categoria === 'Musica');
+    document.title = 'IdeasBox | Inicio';
+    this.Arte = await this.proyects.getBestsByCategory('Arte');
+    this.LibComics = await this.proyects.getBestsByCategory('Libros-Comics');
+    this.Cine = await this.proyects.getBestsByCategory('Cine');
+    this.Juegos = await this.proyects.getBestsByCategory('Juegos');
+    this.Musica = await this.proyects.getBestsByCategory('Musica');
+    this.Comida = await this.proyects.getBestsByCategory('Comida');
   }
 }

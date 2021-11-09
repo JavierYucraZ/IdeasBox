@@ -11,67 +11,79 @@
   <div class="container my-5">
     <div>
       <h1>Proyectos Destacados</h1>
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Arte</p>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-10 col-lg-4 my-2" *ngFor="let itemArte of Arte">
-          <app-card-simple [dataItem]="itemArte"></app-card-simple>
+      <ng-container *ngIf="Arte.length > 0">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Arte</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2" *ngFor="let itemArte of Arte">
+            <app-card-simple [dataItem]="itemArte"></app-card-simple>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
 
-    <div class="my-5">
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Libros y Comics</p>
-      <div class="row align-items-center justify-content-center">
-        <div
-          class="col-10 col-lg-4 my-2"
-          *ngFor="let itemLibComics of LibComics"
-        >
-          <app-card-simple [dataItem]="itemLibComics"></app-card-simple>
+    <ng-container *ngIf="LibComics.length > 0">
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Libros y Comics</p>
+        <div class="row align-items-center justify-content-center">
+          <div
+            class="col-10 col-lg-4 my-2"
+            *ngFor="let itemLibComics of LibComics"
+          >
+            <app-card-simple [dataItem]="itemLibComics"></app-card-simple>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
 
-    <div class="my-5">
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Cine</p>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-10 col-lg-4 my-2" *ngFor="let itemCine of Cine">
-          <app-card-simple [dataItem]="itemCine"></app-card-simple>
+    <ng-container *ngIf="Cine.length > 0">
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Cine</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2" *ngFor="let itemCine of Cine">
+            <app-card-simple [dataItem]="itemCine"></app-card-simple>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
 
-    <div class="my-5">
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Comida</p>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-10 col-lg-4 my-2" *ngFor="let itemComida of Comida">
-          <app-card-simple [dataItem]="itemComida"></app-card-simple>
+    <ng-container *ngIf="Comida.length > 0">
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Comida</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2" *ngFor="let itemComida of Comida">
+            <app-card-simple [dataItem]="itemComida"></app-card-simple>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
 
-    <div class="my-5">
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Juegos</p>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-10 col-lg-4 my-2" *ngFor="let itemJuego of Juegos">
-          <app-card-simple [dataItem]="itemJuego"></app-card-simple>
+    <ng-container *ngIf="Juegos.length > 0">
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Juegos</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2" *ngFor="let itemJuego of Juegos">
+            <app-card-simple [dataItem]="itemJuego"></app-card-simple>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
 
-    <div class="my-5">
-      <hr />
-      <p class="text-center mb-5 display-4 fw-bold">Musica</p>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-10 col-lg-4 my-2" *ngFor="let itemMusica of Musica">
-          <app-card-simple [dataItem]="itemMusica"></app-card-simple>
+    <ng-container *ngIf="Musica.length > 0">
+      <div class="my-5">
+        <hr />
+        <p class="text-center mb-5 display-4 fw-bold">Musica</p>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-lg-4 my-2" *ngFor="let itemMusica of Musica">
+            <app-card-simple [dataItem]="itemMusica"></app-card-simple>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 
   <div class="container">

@@ -27,6 +27,8 @@ import * as FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import * as FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 import { DescriptionComponent } from './Content/Components/description/description.component';
 import { DonateComponent } from './Content/Components/donate/donate.component';
+import { AllByCategoryComponent } from './Content/Pages/all-by-category/all-by-category.component';
+import { MyProyectsComponent } from './Content/Pages/my-proyects/my-proyects.component';
 
 // Register the plugin
 registerPlugin(FilePondPluginImagePreview, FilePondPluginFileEncode);
@@ -46,6 +48,8 @@ registerPlugin(FilePondPluginImagePreview, FilePondPluginFileEncode);
     CreateProyectComponent,
     DescriptionComponent,
     DonateComponent,
+    AllByCategoryComponent,
+    MyProyectsComponent,
   ],
   imports: [
     BrowserModule,

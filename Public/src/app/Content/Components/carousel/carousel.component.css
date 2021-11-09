@@ -1,24 +1,36 @@
 .carousel-item > .row > [class^="col"] {
-    padding: 0;
-  }
-  
-  .carousel-control-next,
-  .carousel-control-prev {
-    width: auto !important;
-  }
-  
-  .sideCaption {
-    padding: 3rem 5.5rem;
-  }
-  
-  .bg-firstCaption {
-    background-color: #b9d2b1;
-  }
-  
-  .bg-secondCaption {
-    background-color: #f1d6b8;
-  }
-  
-  .bg-thirdCaption {
-    background-color: #dac6b5;
-  }
+  padding: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: auto !important;
+}
+
+.sideCaption {
+  padding: 3rem 5.5rem;
+}
+
+.bg-firstCaption {
+  background-color: #b9d2b1;
+}
+
+.bg-secondCaption {
+  background-color: #f1d6b8;
+}
+
+.bg-thirdCaption {
+  background-color: #dac6b5;
+}
+
+.bg-fourthCaption {
+  background-color: #b6bceb;
+}
+
+.bg-fifthCaption {
+  background-color: #f3bcd6;
+}
+
+.bg-sixthCaption {
+  background-color: #8fa89e;
+}

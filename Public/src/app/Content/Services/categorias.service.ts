@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class CategoriasService {
   categorias = [
     { title: 'Arte' },
-    { title: 'Libros y Comics' },
+    { title: 'Libros-Comics' },
     { title: 'Cine' },
     { title: 'Comida' },
     { title: 'Juegos' },

@@ -6,16 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-simple.component.css'],
 })
 export class CardSimpleComponent implements OnInit {
-  @Input() dataItem: {
-    id: number;
-    url: string;
-    title: string;
-    shortDescription: string;
-  };
+  @Input() dataItem: any;
 
-  constructor() {
-    this.dataItem = { id: 0, url: '', title: '', shortDescription: '' };
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
